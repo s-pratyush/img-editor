@@ -14,17 +14,24 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>editor</title>
-    <script src="script.js"></script>
+    <title>Image Editor Room</title>
+    
 </head>
 <body style="background-color: black;">
     <div class="edtr">
-      <h1 id="h"><u>Image EDITINGROOM</u></h1>
+      <h1 id="h">Image Editing Room</h1>
      <div class="cont">
          <div class="view" id="v"><img id="output"><p class="intxt" id="it">Upload The image</p></div>
          <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
          <p id="up"><label for="file" style="cursor: pointer; color:rgba(82, 216, 250); font-size: 25px;"><i  class='fas'>&#xf35b;</i></label></p>
-     </div>
+                          
+         
+         <!-- Save button -->
+    <button id="saveBtn" onclick="printDiv('v')">Click to Save</button>
+
+
+    
+        </div>
     </div>
     <section class="t_box">
         <div class="container">
@@ -116,17 +123,12 @@
                        
                       </div>      
                 </div>
+                
               </div>
-    
-    
-    
-              
-    
-              
         </div>
-        
     </section>
+   
     
-
+    <script src="script.js"></script>
 </body>
 </html>
