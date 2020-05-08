@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    position: absolute;
+    top:0;
+    width: 100vw;
+    color:rgb(246, 248, 248);
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 0.25px black;
+
+}
+.editor{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-image: linear-gradient(to right top, #17aae8, #00acdb, #00adc9, #00acb6, #0daaa1);
+}
+    .container{
+    position: relative;
+    display: inline-block;
+    width:60%;
+    height: 60vh;
+    margin-top: 80px;
+    border:none;
+    border-radius: 25px;
+    text-align: center;
+    background-color:rgb(247, 238, 238);
+}
+.inner_box{
+    
+    text-align: center;
+        height: 90%;
+    margin-top: 2vh;
+    box-shadow: inset -1px -1px 3px 3px rgb(184, 180, 180);
+     width: 100%;
+     border-radius: 25px;
+    background-color: rgb(252, 246, 246);
+    padding: 2% 2% 2% 2%;
+}
+
+.tool_box{
+    position:absolute;
+    height:80px;
+    width: 100vw;
+    display: inline-block;
+    bottom: 0;
+    left:0;
+    text-align: center;
+    
+}
+#btn{
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 100vw;
+    margin-top:1%;
+    
+}
+#inner_text{
+    margin-top:5vh;
+    font-size: large;
+    color: grey;
+    font-family: sans-serif;
+}
+#output_image{
+    max-width: 100%;
+    display: inline-block;
+    max-height: 50vh;
+}
+
+
+.tool{
+    color:#f3f5f5;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 5px;
+    text-shadow: 4px 2px 10px 0px  #aaaaaa;
+    -webkit-text-stroke: 0.25px black;
+}
+ .tool:hover span{
+    transform: scale(1.2);
+}
+.dragger_box{
+    position:absolute;
+    width:100px;
+    top:-10px;
+    display:none;
+    border:none;
+    color: black;
+    border-radius: 20px;
+    padding:3px 10px 3px 10px;
+    box-shadow: 4px 2px 10px 0px  #928d8d;
+    background-color:white;
+}
+.tool:hover .dragger_box{
+    display:block;
+} 
+
+.button {
+    display: inline-block;
+    border-radius:20px;
+    background-color: rgb(13, 135, 156);
+    border: none;
+    color: rgb(252, 244, 244);
+    text-align: center;
+    font-size: 24px;
+    padding: 5px;
+    width: 125px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: 4px 2px 10px 0px  #0c0808;
+
+}
+  #download_btn{
+      width: 150px;  
+  }
+  #download_btn span:after{
+      transform: rotate(90deg);
+  }
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: ' \00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+    transform: rotate(-90deg);
+  }
+  
+  .button:hover span {
+    padding-right: 20px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  @media only screen and (max-width: 600px){
+.button{
+    width: 25vw;
+    border-radius: 10px;
+    font-size: 4vw;
+    padding: 2vw;
+    margin: 2vh;
+
+}
+.button span:after {
+    right: -5%;
+}
+.button:hover span {
+    padding-right: 5vw;
+  }
+  #download_btn{
+    width: 28vw;  
+    padding-right: 5vw;
+}
+h1{
+    font-size: x-large;
+}
+.container{
+    margin-top: 50px;
+    width: 80%;
+}
+.dragger_box{
+    width: 80px;
+    margin-top: 15px;
+}
+.tool{
+    margin-top: 25px;
+}
+#last_dbox{
+    right: 2px;
+}
+#inner_text{
+    font-size: 3vw;
+}
+#output_image{
+    max-width: 90%;
+}
+
+  }

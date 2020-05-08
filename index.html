@@ -2,133 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="new_style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Image Editor Room</title>
-    
-</head>
-<body style="background-color: black;">
-    <div class="edtr">
-      <h1 id="h">Image Editing Room</h1>
-     <div class="cont">
-         <div class="view" id="v"><img id="output"><p class="intxt" id="it">Upload The image</p></div>
-         <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
-         <p id="up"><label for="file" style="cursor: pointer; color:rgba(82, 216, 250); font-size: 25px;"><i  class='fas'>&#xf35b;</i></label></p>
-                          
-         
-         <!-- Save button -->
-    <button id="saveBtn" onclick="printDiv('v')">Click to Save</button>
-
-
-    
-        </div>
-    </div>
-    <section class="t_box">
-        <div class="container">
-            <div class="dropup" id="t1">
-                <button type="button" class="dropbtn"><span style="font-size:22px;" class="glyphicon">&#xe064;</span>
-                </button>
-                 <div class="dropup-content">
-                    <div class="slidecontainer">
-                        <input type="range" min="0" max="10" value="1" step="0.1" class="slider" id="sl1" oninput="blr()">
-                    </div> 
-                </div>
-              </div>
-    
-    
-              <div class="dropup">
-                <button type="button" class="dropbtn"><span style="font-size:22px;" class="glyphicon">&#xe105;</span>
-                </button>
-                 <div class="dropup-content">
-                    <div class="slidecontainer">
-                      <input type="range" min="0" max="100" value="1" step="1" class="slider" id="sl2" oninput="op()">
-                    </div>
-                </div>
-              </div>
-    
-    
-              <div class="dropup">
-                <button type="button" class="dropbtn"><span style="font-size:22px;" class="glyphicon">&#xe138;</span>
-                </button>
-                 <div class="dropup-content">
-                    <div class="slidecontainer">
-                      <input type="range" min="1" max="10" value="0.1" step="1" class="slider" id="sl3" oninput="sat()">
-                       
-                      </div>           
-                </div>
-              </div>
-    
-    
-              <div class="dropup">
-                <button type="button" class="dropbtn"><span class="glyphicon" style="font-size:22px;">&#xe063;</span>
-                </button>
-                 <div class="dropup-content">
-                    <div class="slidecontainer">
-                      <input type="range" min="1" max="300" value="0.1" step="1" class="slider" id="sl4" oninput="gscale()">                   
-                      </div>       
-                </div>
-              </div>
-    
-            
-              <div class="dropup">
-                <button type="button" class="dropbtn"><i style='font-size:22px' class='fas'>&#xf185;</i>
-                </button>
-                 <div class="dropup-content">
-                    <div class="slidecontainer">
-                      <input type="range" min="50" max="250" value="100" step="1" class="slider" id="sl5" oninput="bri()">                   
-                       
-                      </div>      
-                </div>
-              </div>
-    
-              <div class="dropup">
-                <button type="button" class="dropbtn"><i style='font-size:22px' class='fas'>&#xf0d0;</i>
-                </button>
-                 <div class="dropup-content">
-                    <div class="slidecontainer">
-                      <input type="range" min=1 max="100" value="1" step="0.1" class="slider" id="sl6" oninput="magic()">                   
-                      </div>      
-                </div>
-              </div>
-              
-    
-              <div class="dropup">
-                <button type="button" class="dropbtn"><i style='font-size:22px' class='fas'>&#xf769;</i>
-                </button>
-                 <div class="dropup-content">
-                    <div class="slidecontainer">
-                      <input type="range" min="0" max="10" value="5" step="0.1" class="slider" id="sl7" oninput="tmp()">                                      
-                      </div>      
-                </div>
-              </div>
-    
-    
-              <div class="dropup">
-                <button type="button" class="dropbtn"><i style="font-size:22px" class="fa">&#xf2dc;</i>
-    
-                </button>
-                 <div class="dropup-content">
-                    <div class="slidecontainer">
-                      <input type="range" min="50" max="250" value="100" step="10" class="slider" id="sl8" oninput="con()">                                      
-                       
-                      </div>      
-                </div>
-                
-              </div>
-        </div>
-    </section>
-   
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet"> 
     <script src="script.js"></script>
+    <title>IMAGE EDITOR ROOM</title>
+</head>
+<body>
+    <section class="editor">
+     
+
+
+        <!--IMAGE CONTAINER -->
+
+        <h1>IMAGE EDITOR ROOM</h1>
+        <div class="outer_container">
+
+        <div class="container" id="view_image">
+            <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
+            <div id="view_box" class="inner_box"><img id="output_image">
+            <p id="inner_text">Upload Image Here</p>
+             </div>        
+        </div>
+        
+        <span id="btn">
+        <label for="file" >
+            <span class="button"><span>Upload </span></span>
+        </label>
+        <span class="button" id="download_btn" onclick="printDiv('view_box')"><span><b>Download</b></span></span>
+        </span>
+        </div>
+         <!-- TOOL BOX-->
+         <div class="tool_box">
+
+             <div class="tool">
+                 <div class="dragger_box"><input type="range" min="0" max="10" value="1" step="0.1" id="blur_tool" oninput="set_blur()"></div>
+                 <span style="font-size:5vh;" class="glyphicon">&#xe064;</span>             
+                </div>
+                <div class="tool">
+                    <div class="dragger_box"><input type="range" min="50" max="200" value="1" step="2" id="contrast_tool" oninput="set_contrast()"></div>
+                    <span style="font-size:5vh;" class="fas">&#xf185;</span>             
+                   </div>
+                   <div class="tool">
+                    <div class="dragger_box"><input type="range" min="0" max="5" value="1" step="0.1" id="saturation_tool" oninput="set_saturation()"></div>
+                    <span style="font-size:5vh;" class="fas">&#xf769;</span>             
+                   </div>
+                   <div class="tool">
+                    <div class="dragger_box"><input type="range" min="10" max="100" value="1" step="2" id="opacity_tool" oninput="set_opacity()"></div>
+                    <span style="font-size:5vh;" class="fa">&#xf2dc;</span>             
+                   </div> 
+                   <div class="tool">
+                    <div class="dragger_box"><input type="range" min="10" max="300" value="50" step="1" id="brightness_tool" oninput="set_brightness()"></div>
+                    <span style="font-size:5vh;" class="fa">&#xf0d0;</span>             
+                   </div> 
+                   <div class="tool">
+                    <div class="dragger_box" id="last_dbox"><input type="range" min="0" max="100" value="1" step="2" id="grayscale_tool" oninput="set_grayscale()"></div>
+                    <span style="font-size:5vh;" class="glyphicon">&#xe105;</span>             
+                   </div>         
+       </div>
+    </section>  
 </body>
+
 </html>
