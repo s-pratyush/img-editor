@@ -24,7 +24,7 @@
 
         <div class="container" id="view_image">
             <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
-            <div id="view_box" class="inner_box"><img id="output_image">
+            <div id="view_box" class="inner_box"><div id="print"><img id="output_image"></div>
             <p id="inner_text">Upload Image Here</p>
              </div>        
         </div>
@@ -33,7 +33,7 @@
         <label for="file" >
             <span class="button"><span>Upload </span></span>
         </label>
-        <span class="button" id="download_btn" onclick="printDiv('view_box')"><span><b>Download</b></span></span>
+        <span class="button" id="download_btn" onclick="printDiv('print')"><span><b>Download</b></span></span>
         </span>
         </div>
          <!-- TOOL BOX-->
@@ -41,27 +41,27 @@
 
              <div class="tool">
                  <div class="dragger_box"><input type="range" min="0" max="10" value="1" step="0.1" id="blur_tool" oninput="set_blur()"></div>
-                 <span style="font-size:5vh;" class="glyphicon">&#xe064;</span>             
+                 <span  class="glyphicon">&#xe064;</span>             
                 </div>
                 <div class="tool">
                     <div class="dragger_box"><input type="range" min="50" max="200" value="1" step="2" id="contrast_tool" oninput="set_contrast()"></div>
-                    <span style="font-size:5vh;" class="fas">&#xf185;</span>             
+                    <span  class="fas">&#xf185;</span>             
                    </div>
                    <div class="tool">
                     <div class="dragger_box"><input type="range" min="0" max="5" value="1" step="0.1" id="saturation_tool" oninput="set_saturation()"></div>
-                    <span style="font-size:5vh;" class="fas">&#xf769;</span>             
+                    <span  class="fas">&#xf769;</span>             
                    </div>
                    <div class="tool">
                     <div class="dragger_box"><input type="range" min="10" max="100" value="1" step="2" id="opacity_tool" oninput="set_opacity()"></div>
-                    <span style="font-size:5vh;" class="fa">&#xf2dc;</span>             
+                    <span  class="fa">&#xf2dc;</span>             
                    </div> 
                    <div class="tool">
                     <div class="dragger_box"><input type="range" min="10" max="300" value="50" step="1" id="brightness_tool" oninput="set_brightness()"></div>
-                    <span style="font-size:5vh;" class="fa">&#xf0d0;</span>             
+                    <span  class="fa">&#xf0d0;</span>             
                    </div> 
                    <div class="tool">
                     <div class="dragger_box" id="last_dbox"><input type="range" min="0" max="100" value="1" step="2" id="grayscale_tool" oninput="set_grayscale()"></div>
-                    <span style="font-size:5vh;" class="glyphicon">&#xe105;</span>             
+                    <span  class="glyphicon">&#xe105;</span>             
                    </div>         
        </div>
     </section>  
