@@ -80,11 +80,13 @@ h1{
     display: inline-block;
     padding: 10px;
     cursor: pointer;
+    margin: 0;
     margin-top: 5px;
-    margin-left: 5px;
     text-shadow: 4px 2px 10px 0px  #aaaaaa;
     -webkit-text-stroke: 0.25px black;
+    font-size: 2.5vw;
 }
+
  .tool:hover span{
     transform: scale(1.2);
 }
@@ -99,6 +101,7 @@ h1{
     padding:3px 10px 3px 10px;
     box-shadow: 4px 2px 10px 0px  #928d8d;
     background-color:white;
+    font-size: 1vw;
 }
 .tool:hover .dragger_box{
     display:block;
@@ -183,9 +186,10 @@ h1{
 }
 .tool{
     margin-top: 25px;
+    font-size: 5vw;
 }
 #last_dbox{
-    right: 2px;
+    right: 5px;
 }
 #inner_text{
     font-size: 3vw;
@@ -193,5 +197,7 @@ h1{
 #output_image{
     max-width: 90%;
 }
+
+
 
   }
